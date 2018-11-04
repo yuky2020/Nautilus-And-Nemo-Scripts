@@ -1,0 +1,1 @@
+There are some application subsitutes to mention: [LibreOffice -> Microsoft Office], [(Totem) Movie Player -> Windows Media Player], [Evolution Mail -> Microsoft Outlook or Outlook Express], [Nautilus File Manager -> Windows Explorer], [Clamav/Ufw -> Norton Antivirus/Firewall], [Gedit Text Editor -> Notepad/Wordpad], [Transmission Bittorent -> uTorrent].

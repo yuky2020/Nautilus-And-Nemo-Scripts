@@ -1,0 +1,53 @@
+#!/bin/bash
+# This file is part of ROSKA Renamer program
+#
+# ROSKA Renamer
+# Copyright (C) 2010 Roberto Scaccaglia
+# This is free software with ABSOLUTELY NO WARRANTY.
+#
+# This program is free software. you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License , or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+function setLanguage ()
+{
+	progName_str="$1"
+	programFolder_str="$2"
+	langFolder_str="$3"
+	langFilePrefix_str="$4"
+	defaultLang_str="$5"
+
+	selectedLang_str="$defaultLang_str"
+	langAvailable_str=""
+
+	currentIFS_str=$IFS
+	IFS=$(echo -en "\n\b")
+	for langFile_str in $langFolder_str/* ; do
+		langFile_str=$(basename $langFile_str)
+		currentFileLang_str="${langFile_str##*.}"
+		if [ "$currentFileLang_str" == "$defaultLang_str" ]; then
+			currentFileLang_str="TRUE $currentFileLang_str $currentFileLang_str"
+		else
+			currentFileLang_str="FALSE $currentFileLang_str $currentFileLang_str"
+		fi
+		langAvailable_str="$langAvailable_str $currentFileLang_str"
+	done
+	IFS=$currentIFS_str
+	selectedLang_str=$(echo $langAvailable_str | xargs zenity --list --radiolist --title="$progName_str" --hide-column 2 --separator "$(echo -e "\n\r")" --width 400 --height 300 --text="${langSel_txt[0]}" --column "${langSel_txt[1]}" --column "" --column "${langSel_txt[2]}")
+	if [ -z $selectedLang_str ]; then return 1; fi # If cancel button is pressed the function ends
+
+	cp "$langFolder_str/$langFilePrefix_str.$selectedLang_str" "$programFolder_str/$langFilePrefix_str.default"
+	zenity --info --title="$progName_str" --text="${langSel_txt[3]}"
+	return 1
+}
+
+

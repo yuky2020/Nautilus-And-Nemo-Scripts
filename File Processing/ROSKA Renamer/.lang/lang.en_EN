@@ -1,0 +1,63 @@
+#!/bin/bash
+# This file is part of ROSKA Renamer program
+#
+# ROSKA Renamer
+# Copyright (C) 2010 Roberto Scaccaglia
+# This is free software with ABSOLUTELY NO WARRANTY.
+#
+# This program is free software. you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License , or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+currentLang_str=en_EN
+
+startAction_txt[1]="Rename"
+startAction_txt[2]="Undo last"
+startAction_txt[3]="Set language"
+startAction_txt[4]="User Manual (english only)"
+startAction_txt[5]="Info/About"
+
+nothingToRename_txt="No file selected."
+
+newName_txt[0]="Insert the new file name.\nAllowed special chars: .()__- space"
+newName_txt[1]="You have typed an invalid file name."
+
+counterVal_txt[0]="Insert the start counter value"
+counterVal_txt[1]="Wrong number format."
+
+optionSel_txt[0]="Select options"
+optionSel_txt[1]="Sel."
+optionSel_txt[2]="Option"
+optionDesc_txt[1]="Overwrite (uncheck to copy in new file)"
+optionDesc_txt[2]="Save extension (uncheck to ignore original file extension)"
+
+result_txt[0]="files processed"
+result_txt[1]="Files skipped because destination names already exist:"
+result_txt[2]="Source name"
+result_txt[3]="Dest. name"
+
+warning_txt[0]="WARNING!\nSome selected files are in different path!"
+
+undo_txt[0]="Nothing to undo."
+undo_txt[1]="Undo process is ended with"
+undo_txt[2]="Undo process is ended."
+
+langSel_txt[0]="Select language"
+langSel_txt[1]="Sel."
+langSel_txt[2]="Available languages"
+langSel_txt[3]="The new language has been set."
+
+renamed_txt="renamed"
+skipped_txt="skipped"
+error_txt="errors"
+
+renaming_txt="Renaming files..."

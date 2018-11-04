@@ -1,0 +1,11 @@
+#!/bin/sh
+
+OLDSTATE=$(gconftool-2 --get "/desktop/gnome/file_views/show_hidden_files")
+
+if [ "$OLDSTATE" == "false" ] ; then
+   NEWSTATE="True"
+else
+   NEWSTATE="False"
+fi
+
+gconftool-2 --set "/desktop/gnome/file_views/show_hidden_files" --type boolean $NEWSTATE

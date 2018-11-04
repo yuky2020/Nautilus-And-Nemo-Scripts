@@ -1,0 +1,1 @@
+If you wish to open this extremely helpful text again, it is as easy as: single-clicking the right mouse button anywhere on the Desktop (or in Nautilus File Manager) -> Scripts -> My_Scripts -> For-Newbies -> For-Newbies.sh.

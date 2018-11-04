@@ -1,0 +1,626 @@
+v.0.9.9.1
+[add] -- TR#032: Hellgate added!
+[add] -- TR#098: Lesser uniques made non-unique Exotics!
+[add] -- TR#033: Experimental GMF support
+                 ("doomrl -record filename.gmf")
+[add] -- TR#---: Experimental sandbox level support
+                 ("doomrl -sandbox sandbox/sandbox_arena.lua")
+[add] -- TR#---: [secret feature]
+[add] -- TR#---: added two exotic weapons (shotgun and chain)
+[add] -- TR#093: Gibbing! Massive damage (nukes included) doesn't leave corpses,
+                 and corpses may be destroyed
+[add] -- TR#---: Unhandled Exceptions now leave a error.log!
+[add] -- TR#---: color.ini added :)
+[mod] -- TR#---: Trait screen can be accessed anytime ("T")
+[mod] -- TR#098: removal of advanced weapons, whizkid bonus upped
+[mod] -- TR#---: walls and other terrain now have hp in addition to armor
+[mod] -- TR#098: all UNIQUE's resist destruction, lava, nuking and armors don't
+                 get destroyed
+[mod] -- TR#100: armor always has at least 1 protection until destroyed or 0
+                 durability, made stronger armors more durable
+[mod] -- TR#---: balance : arachs and commandos 1 less accuracy, arachs 1 less shot
+[mod] -- TR#---: balance : demons upgraded
+[mod] -- TR#122: medal info on player screen
+[mod] -- TR#---: upgraded HOF table
+[mod] -- TR#---: upgraded player info screens
+[mod] -- TR#124: message on all wall destroying lever
+[mod] -- TR#093: Nightmare! is Fast -- monsters move faster, shoot more often
+[mod] -- TR#116: you can now escape out of the mod menu
+[mod] -- TR#---: DoomRL now blocks the close window button and doesn't react for
+                 Ctrl-C (Windows only)
+[mod] -- TR#136: LockClose and LockBreak options added to ini
+[mod] -- TR#112: ESCAPE and OK ini-settings now correctly recognized
+[mod] -- TR#BNT: Fireangel requirements changed (now an alternative shotty-run trait)
+[mod] -- TR#141: Gib sound added
+[mod] -- TR#138: Megasphere fixes armor on AoMs
+[mod] -- TR#139: Failed JC kill attempts count as a win now
+[mod] -- TR#063: Ao100 now has a proper mortem and highscore message
+[fix] -- TR#114: zero-time melee attack fixed
+[fix] -- TR#109: barrels pushed into acid/lava have now the proper explosion
+[fix] -- TR#108: phase devices are properly used on AoI
+[fix] -- TR#106: crash on Blaster with Shottyman fixed
+[fix] -- TR#104: infinite loop on corrupted savefile fixed
+[fix] -- TR#103: crash on mortem fixed
+[fix] -- TR#---: UAC Diamond Badge now achievable
+[fix] -- TR#125: correct meta-information for executable
+[fix] -- TR#110: nuking oneself will no longer give abnormaly low scores
+[fix] -- TR#101: shotgun pump sound position fixed
+[fix] -- TR#113: gun kata now dual-reloads uniques
+[fix] -- TR#115: fixed all badge bugs relatred to timed or max-kill challenges
+[fix] -- TR#120: EmptyConfirm message now appearing correctly
+[fix] -- TR#121: "normal" highscore filter works again
+[fix] -- TR#123: monster spawning on player fixed
+[fix] -- TR#---: Fixed MasterDodge trait
+[fix] -- TR#---: Railgun shots visible again
+[fix] -- TR#126: nuke nick of time bug fixed
+[fix] -- TR#---: score is no longer based on game-time
+[fix] -- TR#137: updated AoB description
+[fix] -- TR#---: crash on God Hand rank fixed
+[fix] -- TR#129: viewing enemy information out of LOS via LookMode not possible
+                 anymore
+[fix] -- TR#143: Unaccesible stairs bug fixed
+[fix] -- TR#---: fixed crash on too long staying on a level on Nightmare
+[fix] -- TR#---: OnKill hook active again (fixes a couple bugs, thanks sorear)
+
+v.0.9.9
+[add] -- TR#003: Master Traits implemented!
+[add] -- TR#002: enhanced traits pick menu!
+[add] -- TR#001: items sets implemented!
+[add] -- TR#065: Phaseshift set, Gothic setm Angelic Set
+[add] -- TR#023: Skill rank system blown up -- now badge-based, and 19 levels!
+[add] -- TR#023: Badges galore! 91 badges to aquire!
+[add] -- TR#---: Two new unique weapons, two new unique armors, unique modpacks
+[add] -- TR#080: real-time total player time tracking
+[add] -- TR#022: enhanced kills player page
+[add] -- TR#020: New enhanced player and score files!
+[add] -- TR#022: Uniques in player data!
+[add] -- TR#023: Medals!
+[add] -- TR#029: player.wad and score.wad backup
+[add] -- TR#076: Mods made multi-purpose!
+[add] -- TR#078: Melee weapons can now be modded!
+[add] -- TR#270: Angel of Shotgunnery and Angel of Max Carnage
+[add] -- FS#279: Two new kinds of barrels!
+[add] -- FS#---: Alternative Reload descriptions
+[add] -- FS#---: Alternative Fire Modes (Chain fire!)
+[mod] -- FS#---: Chaingun fires now 4 shots, Plasma 6 shots, plasma accuracy+1
+[mod] -- TR#096: Dodge master a advanced trait, Gun Kata requires Dodge Master
+[mod] -- TR#096: CatEye returns as master trait, removed Regenerator
+[mod] -- TR#096: Cacodemon blast smaller
+[mod] -- TR#096: Plasma now halves armor (plasma weapon damage reduced a bit)
+[mod] -- TR#096: Vaults now have a teleport in the middle vault
+[mod] -- TR#---: enemies no longer hunt useless items
+[mod] -- TR#086: Targeting changed -- if last turn you aimed at an empty coord, it will reaim
+[mod] -- TR#---: AoD and AoDD removed
+[mod] -- TR#---: AoRA time reduced to 4 minute
+[mod] -- TR#---: Rebalanced unique items
+[mod] -- TR#---: Minigun can now be modded, many uniques can be modded once
+[mod] -- TR#---: BFG9000 now has half knockback, BFG10K made a true ass-kicker
+[mod] -- TR#---: brute now gives +2 melee hit chance
+[mod] -- TR#---: broken player dats are now marked as such, instead of removing
+[mod] -- TR#---: added more sensible arena final reward for AoB and AoMr
+[mod] -- TR#---: Angelic Armor no longer can be destroyed when worn
+[mod] -- TR#---: Finesse now gives 15% bonus
+[mod] -- TR#---: Intuition is now 2-level
+[mod] -- TR#076: removed traited (e.g. rapid) weapons
+[mod] -- TR#062: items dropped on or flooded by acid/lava will now be destroyed
+[mod] -- TR#004: sound now via FMOD (should fix some crashes!)
+[mod] -- TR#055: armor damage reduced for better armors
+[mod] -- TR#054: shotgun damage upped to 8 dice
+[mod] -- TR#013: overcharged bfg's have +20 damage, plasmas +2
+[mod] -- FS#276: Cybie, AoD, JC have now upped health on higher difficulty levels
+[mod] -- FS#---: Arch-vile blast can be sidestepped
+[mod] -- FS#268: natural attacks are now stored as weapons
+[mod] -- FS#---: monsters now have different (configurable) attack chances
+[mod] -- FS#---: cacodemon missiles are now easier to sidestep
+[mod] -- FS#---: Knife has now a +1 accuracy bonus
+[mod] -- FS#---: Badass is now a single level trait that stops Health degradation
+                 and gives a bonus to knockback stopping. Also it gives a 25%
+                 chance of not getting hurt at all when receiving <1 damage
+[mod] -- FS#---: Barons and knights are now acid resistant
+[mod] -- FS#---: LookMode descriptions are now complete
+[mod] -- FS#263: Visual and message warning of ending power up
+[mod] -- FS#---: Acid damage damages armor twice as fast
+[mod] -- FS#---: Sharpnel damage (shotguns) is affected *2 by armor
+[mod] -- FS#---: Explosions from missiles hitting walls now happen a square before the wall
+[mod] -- FS#---: made Megasphere more often
+[mod] -- FS#---: Player level 20 achieveable, exp view is MAX at 20
+[mod] -- FS#274: Message is printed when an unique is destroyed by an explosion
+[fix] -- FS#---: Enemy Melee attacks now properly use the difficulty toHit bonus
+[fix] -- TR#---: double level bug fixed
+[fix] -- FS#---: toHit values now properly displayed
+[fix] -- FS#262: LS is no longer seen from outside of the Cathedral
+[fix] -- FS#253: Inventory view no longer crashes when empty
+[fix] -- FS#251: Screenshots record dots properly now
+[fix] -- FS#252: Envirosuit can no longer be carried on AoI
+[fix] -- TR#006: screenshots fixed
+
+v.0.9.8.10
+(23.IV.2008)
+[add] -- FS#---: 2 additional inventory slots!
+[add] -- FS#---: Added Revenant!
+[add] -- FS#---: All items have now descriptions
+[add] -- FS#---: Colored inventory/eq menus (may be turned off in ini-file)
+[add] -- FS#---: New Special levels - The Lava Pits and The Vaults
+[add] -- FS#---: Save count and crash count added into mortem.txt
+[add] -- FS#064: New item - envirosuit pack
+[add] -- FS#---: Added new unique pistol
+[add] -- FS#---: Highscores can now be filtered for "no challenge" ("-" key)
+[add] -- FS#157: Default menu style for inventory is now Hybrid (both arrow keys and letters)
+[add] -- FS#157: Inventory menu handling can now be set using InvMenuStyle in ini-file
+[add] -- FS#219: You can now set a default name in the ini-file
+[add] -- FS#225: Added more variations of monster groups
+[mod] -- FS#---: Berserk melee damage is now *2 not *3, but AFTER SoB/Brute bonus
+[mod] -- FS#---: Berserker is now a single level trait
+[mod] -- FS#---: Changed the unique rocket launchers
+[mod] -- FS#---: Dualgunner is now a single level trait (120%)
+[mod] -- FS#---: EagleEye now affects melee accuracy too
+[mod] -- FS#---: Inventory screen has now more info
+[mod] -- FS#---: Most monsters wont happily walk into lava now
+[mod] -- FS#---: Removed the places visited from the mortem
+[mod] -- FS#---: Revisited Chained Court, Halls of Carnage and Hells Armory
+[mod] -- FS#---: Vaults now have 2* chance of generating Unique items
+[mod] -- FS#181: Acid/lava damage is halved at ITYTD difficulty
+[mod] -- FS#181: Boots protection cut in half
+[mod] -- FS#181: Increased Lava and Acid damage (a lot)
+[mod] -- FS#181: Running halves acid/lava damage
+[mod] -- FS#194: Basins of lava/acid won't generate very large
+[mod] -- FS#200: Durability mod nerfed by half
+[mod] -- FS#208: Armor shards work on boots also
+[mod] -- FS#209: Stairs report messages when entered on
+[mod] -- FS#215: Running is now delayed (value in ini) and can now be interrupted
+[mod] -- FS#224: AoPc gains 1 level every 3 base levels
+[mod] -- FS#237: Incremental terrain damage implemented
+[mod] -- FS#243: armor levers now repair boots too
+[fix] -- FS#---: Fixed a bug with ammo usage of weapons with higher than one shotcost
+[fix] -- FS#---: Melee challenege Hook checks are made only for the player now
+[fix] -- FS#---: Moved the killlist in player info higher to prevent overwriting
+[fix] -- FS#---: Removed double explosion on barrels, increased their damage to 6d6 to compensate
+[fix] -- FS#---: Running over water now possible, running over Acid not
+[fix] -- FS#---: Typos fixed
+[fix] -- FS#013: Nuke bug hopefully fixed (temporarily before player.dat upgrade)
+[fix] -- FS#082: PowerUp soundbinds should work now
+[fix] -- FS#197: Monsters no longer survive the nuke if you die before the explosion
+[fix] -- FS#201: Minigun has now chaingun accuracy
+[fix] -- FS#203: No more homing phase device carrying on AoI
+[fix] -- FS#206: No more negative experience on AoPacifism
+[fix] -- FS#207: Invulnerability resets tired/running state
+[fix] -- FS#211: You can't apply accuracy mods to shotguns anymore
+[fix] -- FS#212: Fixed wall boundary crash (hopefully)
+[fix] -- FS#213: Uniques wont spawn with advanced traits anymore
+[fix] -- FS#216: Cyberdemon wont spawn in collumns anymore
+[fix] -- FS#218: Angel of Haste is playable again
+[fix] -- FS#226: Fixed running the sound version with sound set to false
+[fix] -- FS#227: If music for level is undefined a random track will be played (fixes Ao100)
+[fix] -- FS#232: M and UC no longer spawn on ITYTD
+[fix] -- FS#246: fixed arachnotron sounds
+[fix] -- FS#248: CatEye now works with autoaiming
+
+v.0.9.8.9
+(r324)
+[add] -- FS#060,FS#100,FS#101,FS#164 : Four new challenges!
+[add] -- FS#119: Unique Items! 2 melee, 2 shotguns, 2 pistols, 2 rocket launchers,
+  1 unique BFG, 1 unique plasma, 1 chaingun, 1 special item, 5 armors, 2 boots,
+  and 3 completely new unique weapons!
+[add] -- FS#119: enhanced character ("@") screen
+[add] -- FS#---: Armor and Boots mods!
+[add] -- FS#---: homing phase device added
+[add] -- FS#---: Accuracy mods
+[add] -- FS#---: added two new skill ranks over General
+[add] -- FS#---: added missing monster descriptions
+[add] -- FS#063: Megasphere (200% heal and armor repair to 100%)
+[mod] -- FS#---: reworked Lua scripts
+[mod] -- FS#---: changed experience values for monsters
+[mod] -- FS#074: optional confirmation when trying to fire an empty weapon [DaEezT]
+[mod] -- FS#091: optional pickup sound for swaping, and quickkeying weapons [Malek]
+[mod] -- FS#---: TOTAL Lua rewrite - expect modding and even TC's soon!
+[mod] -- FS#145: Removed bleeding
+[mod] -- FS#068: Vision system rehaul
+[mod] -- FS#---: Juggler now allows instant swap, and instant quickkey
+[mod] -- FS#---: reduced triggerhappy bonus to +1
+[mod] -- FS#---: reworked and tweaked ToHit modifier
+[mod] -- FS#154: tweaked AoB - removed Berserk from LHP and increased knife damage
+[mod] -- FS#---: Eagle Eye bonus reduced to +2 (it's much more valuable now)
+[mod] -- FS#---: monsters have a higher toHit on HMP, UV and N!, and a lower on ITYTD
+[mod] -- FS#163: bumping into a wall no longer takes time
+[mod] -- FS#136: Level name moved to bottom of the screen to make place for armor desc
+[mod] -- FS#141: two small medpacks at start moved to inventory (large on AoB)
+[mod] -- FS#---: armor now has a slight move speed penalty (Green -5%, Blue -10%, Red -20%)
+[mod] -- FS#---: reworked speed system
+[fix] -- FS#169: Kills percentage in mortem now rounded down
+[fix] -- FS#---: Overcharged plasma rifles and BFG now add SoB bonus (they didn't!)
+[fix] -- FS#147: Overcharged BFG now has more damage
+[fix] -- FS#155: medpacks in inv no longer spawn on AoI, AoMs and AoP
+[fix] -- FS#---: correct items spawn in City of Skulls again
+[fix] -- FS#---: affects now are properly saved and loaded
+[fix] -- FS#153: fixed one monster suicide range check error
+[fix] -- FS#144: Ressurection crashbug fixed
+[fix] -- FS#131: Juggler working again
+[fix] -- FS#143: Rezscumming not possible anymore
+[fix] -- FS#137: plasma rifle and BFG ammo fix
+[fix] -- FS#138: boss music wasn't read
+[fix] -- FS#---: Plenty minor fixes
+[fix] -- FS#133: Chainsaw do not jumps into hands
+[fix] -- FS#134: Crash when entered The Wall
+[fix] -- FS#139: Spawn rate fixed
+[fix] -- FS#132: Weapon mods are working again
+[fix] -- FS#135: Computer map no longer in Halls of Carnage
+[fix] -- FS#---: Arch-vile raised monsters no longer give XP
+[fix] -- FS#010: scores now wont dissapear
+[fix] -- FS#019: chainsaw pickup bug fixed
+
+v.0.9.8.8B
+(22.XII.2007) r139
+(19 bugfixes, 23 modifications, 5 additions)
+[add] -- FS#2: New random generator for monster placement! Monsters may appear in packs!
+[add] -- FS#3: New random generator for item placement! Item rarites changed and vault rewards better.
+[add] -- Tactics now temporary -- Running is the default tactic
+[add] -- MaxRun and MaxWait options added to the inifile
+[add] -- Introducing ColorBlindMode
+[mod] -- Green Armor on level 1 on non-AoB UV and N! games
+[mod] -- SoG damage bonus reduced to +1 in fear of rebalancing
+[mod] -- a single weapon mod can be applied to normal weapons
+[mod] -- WhizKid increases modding of normal weapons by +1/level
+[mod] -- Enemies no longer lineup in a horizontal line
+[mod] -- 'f' when in melee executes a directional melee attack (also for barrels/doors)
+[mod] -- level name color changes to blue if "relatively safe" appears.
+[mod] -- easier diff levels and nightmare have now a boost to experience gained
+[mod] -- character name color reflects health
+[mod] -- color of the weapon on the status line changes to red if empty
+[mod] -- Juggler changed - now it alows automatically using a prepared melee weapon in melee
+[mod] -- Run in place (long wait) now possible
+[mod] -- AoMr : you can swap weapons as long as there is a pistol in the prepared slot
+[mod] -- reworked shotguns - combat now more precise, double short range and stronger
+[mod] -- FS#85: reworked explosion damage
+[mod] -- FS#86: rocket launchers should now be stronger
+[mod] -- sounds and music now have separate ini-files
+[mod] -- modified the way sound bindings work (more custom binding power!)
+[mod] -- new music bindings (mp3 and midi in seperate files), also per special level
+[mod] -- FS#49: rewrote the autotarget code
+[mod] -- FS#8: better boots reduce knockback a little
+[mod] -- FS#8: boots get damaged faster
+[mod] -- FS#57: pain elementals don't leave a corpse, but spawn 3 lost souls at death
+[fix] -- FS#62: Barons and Hell knights have separate sounds now (thx Malek)
+[fix] -- maze levels don't generate closed rooms anymore
+[fix] -- exp percent are now floored instead of rounded (no more 100%)
+[fix] -- hopefully fixed one load game crash bug
+[fix] -- FS#25: item wielding monsters wont wield weapons now
+[fix] -- FS#22: Going downstairs, and quitting doesn't take time anymore
+[fix] -- FS#17: Player WILL run over water now, and WON't run into teleporters
+[fix] -- FS#12: You can no longer place a nuke on the stairs
+[fix] -- FS#20: teleports will no longer be placed in corridors
+[fix] -- BBCode screenshot default binding changed to F9
+[fix] -- double and combat shotgun can have their own sounds now
+[fix] -- Unloading of weapons now compatible with Backpack
+[fix] -- fixed overmodding of weapons
+[fix] -- you can no longer close a door on an item or being
+[fix] -- SoB and SoG now give ranged damage bonuses (they didn't!!!)
+[fix] -- reduced arenatype level difficulty
+[fix] -- fixed several typos
+[fix] -- fixed AoI medpack messages
+[fix] -- fixed double player in arena levels
+[fix] -- FS#109: Fixed crash with dual pistols
+[fix] -- FS#105: Fixed crash with Phase Device on AoI
+[fix] -- FS#104: Move after death no longer possible
+
+v.0.9.8.7
+(3.V.2007)
+(20 bugfixes, 19 modifications, 17 additions)
+[add] -- Weapon MODs for advanced weapons!
+[add] -- added backpack! powerup!
+[add] -- retalitation AI for hitting out of los monsters
+[add] -- Highscore Upgrade: challenges, filtering, size 500
+[add] -- Added experience ranks up to Cyberdemon!
+[add] -- rare new arena level type added
+[add] -- new maze level type added
+[add] -- advanced trait : TriggerHappy!
+[add] -- advanced trait : Whizkid (max mods on weapon +4)
+[add] -- Mancubus added!
+[add] -- ASCII screenshots added (F10)
+[add] -- BBCode screenshots added (F11)
+[add] -- Added two new screens to Show Player Data
+[add] -- small screenshot in mortem
+[add] -- message buffer ("P") and last messages in mortem.txt
+[add] -- message coloring system (see doomrl.ini)
+[add] -- optional archivising of all mortem.txt's in mortem dir (see doomrl.ini)
+[mod] -- guaranteed knife on level 1 on the Berserk challenge
+[mod] -- Computer Maps now light only blocked cells
+[mod] -- played around with music bindings for special levels
+[mod] -- Nightmare! respawn slower, but NOEXP
+[mod] -- armor colored on status bar based on damage
+[mod] -- quick key now swaps weapon if weapon in prepared slot
+[mod] -- stairs now can't have items on them
+[mod] -- stairs have a different dark color
+[mod] -- hitting a monster outside los has to pass 50% test
+[mod] -- Stonewall advanced trait merged into Badass
+[mod] -- Juggler now alows instant weapon swap - Finesse 1 required
+[mod] -- Dualgunner has two levels, second level giving 100%
+[mod] -- changed the history system
+[mod] -- trait order in mortem
+[mod] -- return to menu
+[mod] -- revisited rewards for special levels
+[mod] -- Frontal option for quicker gameplay start
+[mod] -- Unholy Cathedral and Mortuary no longer appear on ITYTD
+[mod] -- option to drop an item from equipment if inventory full
+[fix] -- Mortem crashbug fixed!
+[fix] -- Fixed spawning in walls in rooms full of acid
+[fix] -- Finish on diff and get to level work with challenges
+[fix] -- Separate victory music
+[fix] -- Mortem when sacrificing
+[fix] -- teleports will no longer block passages
+[fix] -- running on phobos rock now possible
+[fix] -- Escape skips intro
+[fix] -- non-full reloading fixed
+[fix] -- large medpacks don't work in AoMasochism anymore
+[fix] -- challenges no longer persistent after escape
+[fix] -- StartTrait = 255 fixed
+[fix] -- changed the color of the highlited highscore entry
+[fix] -- proper sound assignments (by Jered Cain)
+[fix] -- when trying to unequip item if inv full there is a message
+[fix] -- Angel of Impatience medikit fix (no longer inv full message)
+[fix] -- Health globes in AoB put you into aggresive tactics
+[fix] -- ArchViles only ressurect corpses in their field-of-vision
+[fix] -- fixed large medpack bug on AoB when on full health
+[fix] -- fixed the Cyberdemon sacrifice bug
+
+v.0.9.8.5
+(27.XI.2006)
+(16 bugfixes, 11 modifications, 18 additions)
+[add] -- Progress tracking!
+[add] -- Challenge Modes!
+[add] -- Difficulty Levels!
+[add] -- new monster - Pain Elemental
+[add] -- new monster - Arch-Vile!
+[add] -- options BlindMode and ClearMessages
+[add] -- commands for BlindMode -- ExamineItem,ExamineNPC
+[add] -- Music and Sound volume in INI-file
+[add] -- LUA scripting support (internally)
+[add] -- an improved Hell's Arena!
+[add] -- two positive lever effects - Armor and MediTech Depot
+[add] -- new ini-file options: StartTrait and StartDifficulty
+[add] -- prepared weapon slot and weapon swap command!
+[add] -- new trait : Juggler - reduces Prepared Weapon swap time
+[add] -- implemented advanced traits (with prerequisites)
+[add] -- five brand new exciting advanced traits :)
+[add] -- message on clearing level
+[add] -- two new but deadly special levels!
+[mod] -- increased the number of levels to 25
+[mod] -- remade trait choice menu
+[mod] -- made cateye an advanced trait
+[mod] -- ported all special levels to LUA
+[mod] -- all special levels dependant on Difficulty
+[mod] -- a few changes in a few special levels ;]
+[mod] -- increased melee hit-chance
+[mod] -- using items now possible from the inventory screen
+[mod] -- enhanced Berserk mode visually
+[mod] -- made Computer Map reveal all items permanently
+[mod] -- level-up happens faster
+[fix] -- fixed levers/items in walls and tele on stairs
+[fix] -- fixed bled to death on Cyber kill bug
+[fix] -- fixed overspawn bug
+[fix] -- ported to Valkyrie 0.4
+[fix] -- fixed lever-scumming
+[fix] -- Skulls, Demons and Cacodemons no longer open doors
+[fix] -- corrected chainsaw first autopickup
+[fix] -- cursor viewing in some places
+[fix] -- fixed special level multi-visits bug
+[fix] -- saving on red stairs now possible
+[fix] -- mouse cursor removed
+[fix] -- fixed "rapid" weapons
+[fix] -- fixed a bug with combat shotgun reload
+[fix] -- you can no longer close a door on youself
+[fix] -- fixed a bug with global dead marine count
+[fix] -- numerous small bugfixes
+
+
+v.0.9.8 (beta)
+(9 bugfixes, 4 modifications, 8 additions)
+(28.IV.2005)
+[add] -- SOUND! Yeah, now hell is getting real ;-)
+[add] -- MUSIC! Let the party begin!
+[add] -- Possibility to bind MP3Files instead
+[add] -- Prepared bindings for MP3's from www.sirgalahad.org/paul/doom/
+[add] -- Saving on crash, finally! (greetings to R. Dan Henry)
+[add] -- new level TYPE! (dedicated to Archibald ;-) ). 
+[add] -- another deadly level TYPE!
+[add] -- killrate in mortem
+[mod] -- Boots get more damaged
+[mod] -- Cyber is unaffected by knockback!
+[mod] -- Cyber has increased vision (prepare phase-devices)
+[mod] -- increased Invulnerability duration.
+[fix] -- proper Keybindings support in target and look mode
+[fix] -- no pumping message when combat shotgun empty
+[fix] -- fixed a CreateRoundDir bug
+[fix] -- fixed a blood boots crash bug
+[fix] -- fixed a bug in the celleffect code (possible IsPlayer crash)
+[fix] -- fixed a bug in the telefrag code (possible IsPlayer crash)
+[fix] -- NoIntro and NoFlashing in ini file works as it should
+[fix] -- IronMan also increases HP (not only HPMax)
+[fix] -- Cyberdeamon => Cyberdemon
+
+v.0.9.7 (beta)
+(11 bugfixes, 19 modifications, 9 additions)
+(24.II.2005)
+[add] -- configuration file
+[add] -- modification of keybindings in config file
+[add] -- very simple run command ","
+[add] -- Dodge System! Moving helps dodging slow missiles a lot!
+[add] -- pump-action combat shotgun instead of assault shotgun!
+[add] -- special reload "R" for some weapons
+[add] -- added a new monster
+[add] -- added new special level...
+[add] -- new Level TYPE! More to come ;-)
+[mod] -- unloading weapons from ground
+[mod] -- ported the whole source to the new Valkyrie library
+[mod] -- video handeled by voutput
+[mod] -- input handeled by vinput
+[mod] -- shotgun hit color depending on damage
+[mod] -- changed the distance modifier for shotgun
+[mod] -- changed (increased and equalized) shotgun damage
+[mod] -- reduced the amount and radius of barrels
+[mod] -- reduced the blast radius of explosions
+[mod] -- decresed the rarity of advanced weapons
+[mod] -- Hellrunner affects Dodge chance
+[mod] -- Ironman trait now gives a whole 10 HP! That's 20% up!
+[mod] -- Finesse now doesn't reduce damage!
+[mod] -- capped Finesse and CatEye to level 2 (they are powerful now)
+[mod] -- increaseed Brute benefit from +2 to +4 (thats +12 on level 3!)
+[mod] -- increased EagleEye benefit to +3 (it was +1 before!!)
+[mod] -- Son of a gun = pistol damage +2/lv! Imagine:11avg.dmg, twice as fast!
+[mod] -- a little manual update (esp. extended Keybindings section)
+[mod] -- moved the level number so full weapon info is visible
+[fix] -- fixed a quit bug
+[fix] -- fixed a bug in showing the look description
+[fix] -- fixed a bug that prevented wall destruction
+[fix] -- now you can define weapon quickkeys yourself. No more quick key code :-D
+[fix] -- fixed many portability bugs
+[fix] -- fixed the forward knockback bug ;D
+[fix] -- fixed that damn levgen bug -- no more impassable/corrupt levels
+[fix] -- fixed a lot crash bugs :-/
+[fix] -- fixed some typos
+[fix] -- Ironman trait didn't work at all! Fixed ;-)
+[fix] -- CatEye now works!
+
+
+v.0.9.6 (beta)
+(16.I.2005)
+(14 bugfixes, 7 modifications, 11 additions)
+[add] -- added two monsters (from DoomII ;-) )
+[add] -- barrels can be pushed ;-)
+[add] -- added knockback! Shotgun keeps their distance ;-)
+[add] -- corpses ;-)
+[add] -- added a few missing ASCII images
+[add] -- armor shards to fix up your armor ;-)
+[add] -- monsters may be armoured (Cyberdemon has 4!)
+[add] -- non-standard weapons - watch for yellow '}'
+[add] -- assault shotgun to be found :D
+[add] -- added weapon unload button
+[add] -- secret level and ultimate ending - realy hard to find ;-)
+[mod] -- upgraded inventory sorting
+[mod] -- various reload times and various firing times for various weapons
+[mod] -- percentage experience indicator
+[mod] -- hp over 100% decays over time
+[mod] -- LostSouls and Cacodemons no longer are affected by Lava/Acid
+[mod] -- Barons and HellKnights are no longer affected by Acid
+[mod] -- some item rarity tweaks
+[fix] -- maybe fixed the barrel explosion bug
+[fix] -- wait key (.) implemented
+[fix] -- fixed health increases from globes
+[fix] -- spelling mistakes
+[fix] -- updated the keybindings list
+[fix] -- fixed wound indication for > 255%
+[fix] -- hopefully fixed the bleeded to death bug
+[fix] -- fixed the bug of unexploding rockets
+[fix] -- minor bug: Ironman didn't give HP at start
+[fix] -- minor bug: name didn't show up after start
+[fix] -- ROTFL - noticed that the double shotgun fired just one shot! fixed :D
+[fix] -- fixed item Rarity code
+[fix] -- fixed a access violation bug (hope it's THE one...)
+[fix] -- added a confirmation message before entering cheat mode
+
+v.0.9.5 (beta)
+(1.I.2005)
+(2 bugfixes, 1 modifications, 9 additions)
+[add] -- added a batchfile that fixes screen size and codepage problems
+[add] -- added a first run screen
+[add] -- bloodtracks ;-)
+[add] -- finally added levers! 'u'se them to activate :D
+[add] -- added another CRAZY feature - only for Doom geeks ;)
+[add] -- added tactics -- use [TAB] to switch tactic
+[add] -- added a new CRAZY item ;)
+[add] -- added the Doom Virtual Machine (ROTFL ;)
+[add] -- added traits!
+[add] -- new special level...
+[add] -- added quit messages.
+[mod] -- increased reload time
+[fix] -- fixed a bug with wrong death reason message
+[fix] -- fixed a bug that prevented game-load
+[fix] -- fixed bug that crashed the game when pressing 1 when axe in hands
+
+
+v.0.9.0 (beta)
+(6.VIII.2003)
+(5 bugfixes, 4 modifications, 12 additions)
+[add] -- possibility of external level
+[add] -- added images od cyberdemon and player
+[add] -- added levelnames and player default names
+[add] -- intro added
+[add] -- room memory (invisible...but see below :)
+[add] -- [TAB] during targeting switches targets
+[add] -- vaults added
+[add] -- pool rooms added
+[add] -- teleports added
+[add] -- off-vision death message
+[add] -- BFG 9000 is to be found :) At last some true cleaning...
+[add] -- added ability to use fixed levels. Added first level
+[mod] -- you hear explosions that you don't see
+[mod] -- moved all help and data files into a single file -- doomrl.wad ;)
+[mod] -- extended drop (allows you to automaticaly drop items to near squares)
+[mod] -- tweaked rarities a bit
+[fix] -- no more stupid Lava/Acid damage to flying/hovering creatures ;)
+[fix] -- monsters no longer gain experience after death
+[fix] -- a critical bug in the apply_damage procedure fixed
+[fix] -- using medpacks while full health doesnt reduce HP anymore
+[fix] -- fixed a serious memory leak
+And a few others I can't remember now...
+
+v.0.8.3 (beta)
+(15.XI.2002)
+(6 bugfixes, 8 modifications, 2 additions)
+[add] -- open/close door doesn't ask for direction if one door or none present
+[add] -- added message when armor protection worsens
+[mod] -- targeting remembers targeted barrels
+[mod] -- levels harder to achieve
+[mod] -- explosion damage no longer goes through walls
+[mod] -- Breserk Packs better and rarer (they heal to 100% and reduce wounds)
+[mod] -- pistols have now only a 6 bullet magazine :) reload more often :)
+[mod] -- trying to fire an empty weapon no longer takes a turn
+[mod] -- just viewing the inventory or equipment doesn't take a turn
+[mod] -- a few other actions don't take a turn
+[fix] -- finaly killed the 0 ammo bug!
+[fix] -- status clear after dshotgun fixed
+[fix] -- more accurate damage indicator by weapons (double -- x2)
+[fix] -- Invunerability no longer reduces your health to 100%
+[fix] -- proper message when no more place for ammo
+[fix] -- no more off-LOS attacks
+
+v.0.8.2 (beta)
+(12.XI.2002)
+(10 bugfixes, 6 modifications, 4 additions)
+[add] -- wear/wield can be now done from the inventory screen
+[add] -- double shotgun quickkey is 3 :)
+[add] -- small Health Globe and large Health Globe -- instant healing
+[add] -- post-mortem file viewed after death
+[mod] -- additional info on the title screen
+[mod] -- rest command now obsolete
+[mod] -- no more natural healing :)
+[mod] -- made bleeding more deadly
+[mod] -- small med-pack heals bleeding and is toned down (HPMax/4)+2
+[mod] -- thrown out the credits -- they were useless anyway
+[fix] -- Escape doesn't exit anymore -- use X instead
+[fix] -- messages for quickkeys
+[fix] -- fixed name entry bug
+[fix] -- explosions no more create locked doors :)
+[fix] -- you can use space instead of enter on most of the screens
+[fix] -- proper death message when killed by bleeding
+[fix] -- no more multiple 'you die!' messages :)
+[fix] -- message field cleared every level
+[fix] -- fixed colors of Invunerability
+[fix] -- character dies at 0 hp
+
+v.0.8.1 (beta)
+(10.XI.2002)
+(5 bugfixes, 3 modifications, 2 additions)
+[add] -- added remembering of last target
+[add] -- player color reflects worn armor
+[mod] -- changed the breserk pack to be twice as long
+[mod] -- renamed help files to *.hlp
+[mod] -- space browses [more] text
+[fix] -- removed beta-test numbers from melee routines
+[fix] -- removed "gold pieces" form credit pickup code
+[fix] -- corected some mistakes in the manual
+[fix] -- added info on armors to manual
+[fix] -- bugfix on Shotgun code
+
+v.0.8 (beta)
+(8.XI.2002)
+-- first beta-test release

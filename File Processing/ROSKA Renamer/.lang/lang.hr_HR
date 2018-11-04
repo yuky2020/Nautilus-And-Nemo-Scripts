@@ -1,0 +1,71 @@
+#!/bin/bash
+# This file is part of ROSKA Renamer program
+#
+# ROSKA Renamer
+# Copyright (C) 2010 Roberto Scaccaglia
+# This is free software with ABSOLUTELY NO WARRANTY.
+#
+# This program is free software. you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License , or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+# Translation author
+# Name: Petar Kulić
+# Nick: Cooleech
+
+# Translation Language: Hrvatski (Croatian)
+
+# Translate only the string, not the variables names
+
+currentLang_str=hr_HR
+
+startAction_txt[1]="Preimenuj"
+startAction_txt[2]="Vrati zadnje"
+startAction_txt[3]="Odaberi jezik"
+startAction_txt[4]="Upute (samo engleski)"
+startAction_txt[5]="Info/O..."
+
+nothingToRename_txt="Nema odabranih datoteka."
+
+newName_txt[0]="Dodajte novo ime datoteke.\nDopušteni specijalni znakovi: .()__- razmak"
+newName_txt[1]="Unijeli ste nedopušteno ime datoteke."
+
+counterVal_txt[0]="Dodajte početnu vrijednost brojača"
+counterVal_txt[1]="Krivi format broja."
+
+optionSel_txt[0]="Odaberite opcije"
+optionSel_txt[1]="Odab."
+optionSel_txt[2]="Opcija"
+optionDesc_txt[1]="Prepiši (odčekirati za kopiranje u novu datoteku)"
+optionDesc_txt[2]="Zadrži nastavak (odčekirati za ignoriranje originalnog nastavka datoteke)"
+
+result_txt[0]="datoteka procesuirano"
+result_txt[1]="Preskočene datoteke jer odredišna imena već postoje:"
+result_txt[2]="Ime izvora"
+result_txt[3]="Ime odredišta"
+
+warning_txt[0]="UPOZORENJE!\nNeke odabrane datoteke su na drukčijoj putanji!"
+
+undo_txt[0]="Nemam što vratiti."
+undo_txt[1]="Proces vraćanja je završio sa"
+undo_txt[2]="Proces vraćanja je završen."
+
+langSel_txt[0]="Odaberi jezik"
+langSel_txt[1]="Odab."
+langSel_txt[2]="Dostupni jezici"
+langSel_txt[3]="Novi jezik je postavljen."
+
+renamed_txt="preimenovano"
+skipped_txt="preskočeno"
+error_txt="greške"
+
+renaming_txt="Preimenujem datoteke..."

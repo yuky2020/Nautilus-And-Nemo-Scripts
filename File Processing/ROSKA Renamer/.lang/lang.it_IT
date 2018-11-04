@@ -1,0 +1,65 @@
+#!/bin/bash
+# This file is part of ROSKA Renamer program
+#
+# ROSKA Renamer
+# Copyright (C) 2010 Roberto Scaccaglia
+# This is free software with ABSOLUTELY NO WARRANTY.
+#
+# This program is free software. you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License , or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+currentLang_str=it_IT
+
+startAction_txt[1]="Rinomina"
+startAction_txt[2]="Annulla ultima ridenominazione"
+startAction_txt[3]="Imposta lingua"
+startAction_txt[4]="Manuale utente (solo in inglese)"
+startAction_txt[5]="Info/About"
+
+nothingToRename_txt="Nessun file selezionato."
+
+newName_txt[0]="Inserisci il nuovo nome.\nCaratteri ammessi: .()__- space"
+newName_txt[1]="Hai inserito un nome non valido."
+
+counterVal_txt[0]="Inserisci il valore iniziale del contatore"
+counterVal_txt[1]="Formato numero errato"
+
+optionSel_txt[0]="Scegli le opzioni"
+optionSel_txt[1]="Sel."
+optionSel_txt[2]="Opzioni"
+optionDesc_txt[1]="Sovrascrivi (non selezionare per copiare in un nuovo file)"
+optionDesc_txt[2]="Mantieni le estensioni (non selezionare per ignorare le estensioni dei file)"
+
+result_txt[0]="file processati"
+result_txt[1]="File saltati perchè il nuovo nome è già esistente"
+result_txt[2]="Nome originale"
+result_txt[3]="Nuovo nome"
+
+warning_txt[0]="ATTENZIONE!\nAlcuni file selezionati sono in percorsi differenti!"
+
+undo_txt[0]="Nessuna operazione da annullare."
+undo_txt[1]="I nomi originali sono stati ripristinati con"
+undo_txt[2]="I nomi originali sono stati ripristinati."
+
+
+langSel_txt[0]="Seleziona la lingua"
+langSel_txt[1]="Sel."
+langSel_txt[2]="Lingue disponibili"
+langSel_txt[3]="La nuova lingua è stata impostata."
+
+
+renamed_txt="rinominati"
+skipped_txt="saltati"
+error_txt="errori"
+
+renaming_txt="Ridenominazione in corso..."

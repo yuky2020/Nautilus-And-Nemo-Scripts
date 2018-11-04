@@ -1,0 +1,1 @@
+If this script is currently popping up at every startup and you are sick of seeing it every time you log into your computer, go to Menu (bottom left button) -> Other -> Startup Applications and uncheck 'For Newbies'.

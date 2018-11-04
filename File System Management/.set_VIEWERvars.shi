@@ -1,0 +1,89 @@
+##
+## Nautilus 'INCLUDE'
+## SCRIPT: set_VIEWERvars.shi
+##
+## PURPOSE: Called by FE Nautilus Scripts to set various env vars
+##          --- mostly 'viewer' (or 'editor') vars. Examples:
+##              TXTVIEWER, TXTEDITOR, HTMLVIEWER, IMGVIEWER, IMGEDITOR,
+##              ANIGIFVIEWER.
+##
+## HOW TO USE this file:
+##
+## Put statements like the following in any FE Nautilus Script
+## that needs to view a text file:
+##
+##    . $HOME/.gnome2/nemo-scripts/.set_VIEWERvars.shi
+##    $TXTVIEWER "$OUTLIST" &
+##
+## To bring up a resultant image file in an image editor:
+##
+##    . $HOME/.gnome2/nemo-scripts/.set_VIEWERvars.shi
+##    $IMGEDITOR "$IMGFILE"
+##
+## To bring up a resultant HTML file in a web browser:
+##
+##    . $HOME/.gnome2/nemo-scripts/.set_VIEWERvars.shi
+##    $HTMLVIEWER "$HTMLFILE"
+##
+## (The ampersand after a call is up to the user.
+##  Whatever seems to be necessary or desirable in the given script.)
+##
+## Started: 2010sep01
+## Changed: 2010sep06 Added vars: TXTEDITOR, HTMLVIEWER, IMGVIEWER, IMGEDITOR
+
+## FOR TESTING:
+# set -v
+# set -x
+
+##########################
+## Set the TXTVIEWER var.
+##########################
+
+# TXTVIEWER="nedit -read"
+# TXTVIEWER="kwrite"
+  TXTVIEWER="/usr/bin/gedit"
+# TXTVIEWER="gedit"
+# TXTVIEWER="$HOME/apps/feXpg_2010sep03/scripts/xpg"
+# TXTVIEWER="$HOME/apps/feXpg/scripts/xpg"
+
+
+##########################
+## Set the HTMLVIEWER var.
+##########################
+
+  HTMLVIEWER="firefox"
+# HTMLVIEWER="$HOME/apps/seamonkey/seamonkey"
+# HTMLVIEWER="seamonkey"
+# HTMLVIEWER="midori"
+
+
+##########################
+## Set the IMGVIEWER var.
+##########################
+
+# IMGVIEWER="mirage"
+# IMGVIEWER="mtpaint"
+# IMGVIEWER="eog"
+# IMGVIEWER="/usr/bin/eog"
+  IMGVIEWER="/usr/bin/viewnior"
+
+
+##########################
+## Set the IMGEDITOR var.
+##########################
+
+# IMGEDITOR="mirage"
+# IMGEDITOR="mtpaint"
+# IMGEDITOR="/usr/bin/mtpaint"
+# IMGEDITOR="gimp"
+  IMGEDITOR="/usr/bin/gpaint"
+
+
+
+##########################
+## Set the ANIGIFVIEWER var.
+##########################
+
+  ANIGIFVIEWER="firefox"
+# ANIGIFVIEWER="mirage"
+# ANIGIFVIEWER="seamonkey"

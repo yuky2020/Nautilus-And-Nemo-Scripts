@@ -1,0 +1,130 @@
+#!/bin/bash
+# This file is part of ROSKA Renamer program
+#
+# ROSKA Renamer
+# Copyright (C) 2010 Roberto Scaccaglia
+# This is free software with ABSOLUTELY NO WARRANTY.
+#
+# This program is free software. you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License , or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+#---------------------------------------------
+#------------- GET START ACTION --------------
+#---------------------------------------------
+
+function getStartAction ()
+{
+	programName_str="$1"
+	action_int="0"
+
+while [ $action_int -eq 0 ]; do
+	action_int=$(zenity --list --radiolist --hide-column 2 --separator "$(echo -e "\n\r")" --width 400 --height 300 --title="$programName_str" --text="${optionSel_txt[0]}" --column "${optionSel_txt[1]}" --column "" --column "${optionSel_txt[2]}" TRUE 1 "${startAction_txt[1]}" FALSE 2 "${startAction_txt[2]}" FALSE 0 "======================" FALSE 3 "${startAction_txt[3]}" FALSE 0 "======================" FALSE 4 "${startAction_txt[4]}" FALSE 5 "${startAction_txt[5]}")
+	if [ $? -eq 1 ]; then return 1; fi # If cancel button is pressed the function ends
+done
+	echo "$action_int"
+}
+
+#---------------------------------------------
+#------------- SHOW USER MANUAL --------------
+#---------------------------------------------
+
+function showUserManual ()
+{
+	programName_str="$1"
+
+	zenity --text-info --title="$programName_str" --width="650" --height="500" --filename="$HOME/.gnome2/nemo-scripts/File Processing/ROSKA Renamer/USER MANUAL.txt"
+	return 1
+}
+
+#---------------------------------------------
+#-------------- SHOW INFO/ABOUT --------------
+#---------------------------------------------
+
+function showInfo ()
+{
+	programName_str="$1"
+
+	zenity --text-info --title="$programName_str" --width="550" --height="400" --filename="$HOME/.gnome2/nemo-scripts/File Processing/ROSKA Renamer/WARRANTY"
+	return 1
+}
+
+#---------------------------------------------
+#------------- GET NEW FILE NAME -------------
+#---------------------------------------------
+
+function getNewFileName ()
+{
+	programName_str="$1"
+	fileName_str="$2"
+	newFileNameCheck_int=0
+
+	while [ $newFileNameCheck_int -eq 0 ]; do
+
+		# Get new filename from user
+		fileName_str=$(zenity --entry --width 300 --title="$programName_str" --text="${newName_txt[0]}" --entry-text="$fileName_str")
+		if [ $? -eq 1 ]; then return 1; fi # If cancel button is pressed the function ends
+
+		# Check if the user input is a valid filename
+		echo "$fileName_str" | grep -E -q '^[0-9a-zA-Z .()_-]+$' # egrep -q '^[0-9a-zA-Z.()_-]+$' also work
+		if [ $? -eq 1 ]; then
+			zenity --warning --title $programName_str --text "${newName_txt[1]}"
+			newFileNameCheck_int=0
+		else
+			newFileNameCheck_int=1
+		fi
+	done
+
+	echo "$fileName_str"
+}
+
+#---------------------------------------------------
+#------------- GET START COUNTER VALUE -------------
+#---------------------------------------------------
+
+function getStartCounterValue ()
+{
+	programName_str="$1"
+	value_int=$2
+	counterValueCheck_int=0
+
+	while [ $counterValueCheck_int -eq 0 ]; do
+		# Ask the user to input a counter start value
+		value_int=$(zenity --entry --height 100 --width 300 --title="$programName_str" --text="${counterVal_txt[0]}" --entry-text="$value_int")
+		if [ $? -eq 1 ]; then return 1; fi # If cancel button is pressed the function ends
+		if ! [[ "$value_int" =~ ^[0-9]+$ ]]; then
+			zenity --warning --title="$programName_str" --text="${counterVal_txt[1]}"
+		else
+			counterValueCheck_int=1
+		fi
+	done
+
+	echo "$value_int"
+}
+
+#-------------------------------------------
+#---------- GET SELECTED OPTIONS -----------
+#--------------------------------------------
+
+
+function getSelectedOptions ()
+{
+	programName_str="$1"
+	overwrite_bool="$2"
+	saveExtension_bool="$3"
+	options_str=""
+
+	options_str=$(zenity --list --checklist --hide-column 2 --separator "$(echo -e "\n\r")" --width 600 --height 300 --title="$programName_str" --text="${optionSel_txt[0]}" --column "${optionSel_txt[1]}" --column "" --column "${optionSel_txt[2]}" $overwrite_bool 1 "${optionDesc_txt[1]}" $saveExtension_bool 2 "${optionDesc_txt[2]}")
+	if [ $? -eq 1 ]; then return 1; fi # If cancel button is pressed the function ends
+
+	echo "$options_str"
+}

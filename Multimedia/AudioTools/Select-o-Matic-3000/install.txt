@@ -1,0 +1,35 @@
+/******************************************************************************
+**                                                                           **
+**                  Copyright (C) L. N. Reed 2010 thru 2010                  **
+**                       lnreed~at~lightning-rose~com                        **
+**                                                                           **
+**               Released under the GNU General Public License               **
+**                       www.gnu.org/copyleft/gpl.html                       **
+**                                                                           **
+******************************************************************************/
+
+    Installation:
+
+        1) Move or copy the executable file to a directory in your 
+           PATH environment. 
+
+           ie: sudo mv som3000 /usr/bin
+
+           or: sudo cp -pv som3000 /usr/bin
+
+        2) Create the folder/directory ~/.som3000
+
+           ie: mkdir ~/.som3000
+
+        3) Move or copy the icon image file som3000icon.png to ~/.som3000
+
+           ie: mv som3000icon.png ~/.som3000
+
+           or: cp som3000icon.png ~/.som3000
+
+        4) Create a desktop icon (optional)
+
+            Gnome: Right click on desktop, select "Create Launcher"
+
+            KDE: Right click on desktop, 
+            select "Create New -> Link to Application"

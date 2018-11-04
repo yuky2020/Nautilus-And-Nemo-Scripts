@@ -1,0 +1,478 @@
+=============================================================================
+
+                ##           #           #               #
+                ######     #####       #####    #       ##
+                ######### ########   ######## ####    ####
+                ### ##### ###  #### ####  ### #####  #####
+                ###   ### ###   ### ###   ### ############
+                ###   ### ###   ### ###   ### ### #### ###
+                ###   ### ###   ### ###   ### ###  ##  ###
+                ###   ### ###   ### ###   ### ###      ###
+                ###  ###  #### #### #### #### ###      ###
+                ### ###    ######     ######   ##      ###
+                #####        ##         ##      #      ###
+                ###                                    ###
+                #         Doom, the Roguelike            #
+                           Version v.0.9.9.1
+
+                   (c) 2002-2010 by Kornel Kisielewicz
+
+
+=============================================================================
+
+Introduction
+
+DoomRL (abbr. for Doom, the Roguelike) is, as the name implies, a
+roguelike game. If you don't know what a roguelike is... hell, then visit
+http://www.adom.de.
+
+
+DoomRL is based on the world from id Software's(tm) game Doom(tm). You're
+the sole surviving marine from a squad sent to investigate a distress call
+from the moonbase of Phobos.  It turns out that all hell has broken loose
+on the plant... literally.
+
+Your quest in DoomRL is to descend into the moonbase complex, find the
+source of this evil outbreak, and destroy it at all costs.
+
+Unlike many other roguelikes, DoomRL is intended to be simple and easy to
+get into. To that end, there is a limited inventory, maps of the size of
+one screen, and one item per tile.  The number of keys you need to 
+remember is also quite small compared to many other games.
+
+
+=============================================================================
+
+Getting Started
+
+When you first start a game of DoomRL, you're presented with a menu screen
+with a few different options. "New game" will, well, start a new game!
+"Show highscores" displays the highscore list, not surprisingly. "Show
+player" displays your player statistics, which include your player rank,
+number of kills, and number of wins. It has 3 screens which can be scrolled
+with the "Right" and "Left" arrow keys. "Help" displays the help screen, which
+contains the info you are currently reading.
+
+"Challenge game" is initially locked, and becomes unlocked after you reach
+Corporal rank(need to survive 10 levels for it). Challenge games force you to
+play the game a certain way (e.g. using only melee), and you can raise your
+player rank in DoomRL by completing them. As your rank goes higher, more
+challenges will be made available to you.
+
+For now, select "New game" with the arrow keys and press "Enter" to start
+your very first game of DoomRL!
+
+Before you start your game, you have to make a few decisions. The first is
+the difficulty level. At the beginning, only three difficulty levels are
+available: "I'm too young to die", "Hey, Not Too Rough", and "Hurt Me
+Plenty". At higher difficulties, more monsters appear and tougher monsters
+appear earlier. "Ultra-Violence" and "Nightmare!" difficulties are unlocked
+as your player rank rises. At Nightmare! difficulty, only the most insane
+DoomRL warriors will stand a chance!
+
+The second decision you have to make is what your name will be in the game.
+You can figure that out, right?
+
+The third and final choice to make is select a starting "trait". 
+Traits are upgrades or "perks" that you earn when you gain levels in DoomRL 
+(by killing monsters). Traits can raise your max health, let you run faster, 
+deal more damage per shot, or otherwise make you more awesome. Each trait can be 
+levelled up individually (up to a maximum of three, usually).
+
+You'll notice a few traits aren't available. Some are "Advanced Traits", and
+require you to learn a normal trait first. Advanced Traits are more situational
+but quite effective, too. The rest are master traits, which require you to take
+a specific set of traits (and block off a few other traits) and give you some
+sort of great unique bonus. But hey, don't think about it too hard. Just pick
+one you like and move on.
+
+And that's it, you're ready to play the game! After a brief intro, you will
+be greeted with something like this:
+
+---------------------------------------------------------------------------
+ Welcome to the Doom Roguelike...
+ ##########
+ #@.........
+ #..........
+ #.........
+ #.........
+ #........
+ #........
+ #.......
+ #......
+ #....
+ #..
+
+
+
+
+
+
+
+
+
+ Doomguy                    Armor : none
+ Health: 100% Exp:  1/0%    Weapon: pistol (2d4) [6/6]
+ cautious                                                    Phobos Base Entry
+---------------------------------------------------------------------------
+                             The Starting Screen
+
+This is a map of the first level of the moonbase on Phobos. The whole level
+is exactly the size of the screen. Walk around (using the arrow keys or numpad)
+and get used to the interface. Don't get yourself killed!
+
+Take a look at the screen. It is divided into three parts. On top you have
+the "message area", made of two lines of text. Watch this space carefully -- it
+may notify you of impending danger or tell you that you're out of ammo (poor
+sob!).
+
+On the bottom you have the status bar. The top line displays your name, and
+below it is the most important stat -- your health. If this one drops
+below one percent, you're dead, dude - nothing can save you. Scanning 
+to the right you can see the experience indicator. The first number is your
+character level -- the higher it is, the tougher you are. The second number
+is your experience displayed as a percentage. Each character level requires
+a certain experience amount needed to achieve it.
+
+Below your health and experience is "tactics". By default your tactic is
+"cautious". This tactic gives no benefits or disadvantages.
+If you press "Tab" once, it will change to "running" (note that changing
+tactics takes some in-game time). With this tactic you have increased movement
+speed, dodge chance, and defence bonus, but have less chance to hit). After
+some time spent running(or after pressing "Tab" again), you will get
+"tired". Tired has no effects, positive or negative (like "cautious"), but
+while "tired", you can't run again. You can return to the "cautious" tactic by
+levelling up, using a health-restoring powerup, using a med-pack, or by
+descending to next level. Since running is limited in this way, try not
+to waste it. But at the same time, remember to use it, they don't stockpile
+for later levels.
+
+In the column to the right of that, you have two indicators, "Armor" and
+"Weapon", that show you what weapon and armor you have equipped. For 
+weapons, the number in brackets indicates what damage the weapon does, and 
+the two numbers in square brackets indicate how much ammo you have loaded 
+in that weapon (eg. [4/6] means you have loaded 4 bullets in a magazine that
+can hold 6).
+
+Between the status bar and message bar, there's the map. The "@" sign with
+the cursor below it -- that's you (aren't you ugly?). See any letters nearby?
+That's an enemy. Kill'em all. The "#" are walls, "+" is a closed door, 
+"/" an open door. Dots are normal floor. Red dots are either Phobos's ugly
+rock landscape (on the first level), or blood (anywhere else).
+
+Press "i" to see your inventory. It's pretty empty, right? Your character
+starts equipped with two things -- your trusty 10mm pistol, and a handful
+of ammo. The pistol is not displayed in the inventory because you have it
+equipped. You can see it on the status bar, or press "e" in-game to see a
+list of equipment.
+
+Your pistol and ammo are not going to last you very long, though.  Press
+"g" to pick up new weapons (represented by "}") and ammo ("|").  If you
+walk around that first level you're likely to run into some small medkits
+(red "+") that you can pick up and add to your inventory. Later on you might
+find other consumable items, they're all "+"s. Press "u" at any time to use
+a consumable. If you ever want to drop something (usually to make room for
+new weapons or items), press "d" to open the drop menu.
+
+As you go deeper into the base, you'll find some power-ups ("^") - they're
+used as soon as you pick them up.
+
+Oh, I almost forgot! To shoot, just press "f" -- you'll be asked for a target
+(if you have a gun and proper ammo, that is...) -- use arrow keys to choose a
+target, and press "f" again to fire. Or, you can press "m" to see an ASCII
+image and description of what you are aiming at. You can also press TAB (when
+targeting) to toggle between the targets. Some weapons allow a "special"
+fire, such as the chainfiring mode of the chaingun.
+
+Ok, I hear you cry -- "Out of ammo!" Don't panic. Press "r" to reload your
+weapon. (Some weapons allow you to do a "special" reload by pressing "R".)
+Reloading is automatic if you have the proper ammo in your inventory. But
+what if you don't? You can try pounding on the enemy with your fists or a
+hand-to-hand weapon -- to do that just walk into him.  Pick up a Berserk
+pack and/or a chainsaw (or at least a knife) and you can do some
+serious damage that way!
+
+Getting hit too frequently when trying to approach an enemy (or when
+running from him)? Try not to move in a straight line, move diagonally, 
+this increases your chance to dodge. If you don't want to approach or
+retreat from the enemy, but also don't want to be hit often, try moving
+from side to side perpendicularly to the direction of enemy, as this
+gives you the same bonus as moving diagonally). Sometimes, in important
+cases, switching to the "running" tactic and using both of these tricks
+at once will give you a much greater chance to dodge than normal.
+
+In the equipment menu (remember, press "e") you'll see that you have a primary
+weapon equipped and a secondary weapon at hand.  By pressing "z" you can
+switch your primary out for your secondary.  This is faster than equipping
+a new weapon from your inventory and it saves you valuable space.  It's
+also quite useful in a firefight, when the situation can change at any
+moment!
+
+Hey, you think you're cool because you found some armor? Think again. Look,
+there are three numbers by the armor. The first two in square brackets are
+[current damage resistance/maximum damage resistance]. The second one is 
+your armor's health. 100% means it's undamaged, 1% is almost destroyed. The 
+more damaged an armor is, the lower its actual resistance is. Throw away 
+armors that have a damage resistance equal zero -- they won't help you 
+anyway. Keep an eye on those numbers!
+
+Try to check out "@" screen, some useful information is written there.
+First - there are listed your main parameters: movement, firing and
+reloading speed, and also your chance to hit with the weapon you currently
+have equipped (from point blank range). Also there you can find
+your level, amount of played turns, and your score so far.
+Second good thing that you can find there are parameters of equipment that
+you have: damage, firing and reloading speed, and accuracy for
+weapons, and protection value, durability, movement and knockback
+modificators for armor and boots (yes, armor and boots can affect your
+movement speed and chance to be knocked back by powerful attacks).
+
+Along the way, you're bound to run into levers ("&") and barrels ("0"). To
+pull a lever, stand on it and press "u" to use them. The effects are random,
+so pull them at your own peril!  And if you've ever played Doom, you know
+what to expect with barrels: They all explode quite nicely, but with varying
+effects depending on the barrel.
+
+There are 3 types of items in this game:
+
+1) Common - hmm... This items are... "common"? You will see them all
+across the game. Most of them can be generated randomly, while some of them
+only appears in certain places (as a reward for completing special level,
+for example). Each common weapon and armor can hold 2 mods (without traits),
+so choose wisely.
+
+2) Exotic - contrary to unique items, exotic weapons may appear more than
+once during a game, and appear more often. Besides that they are usually more
+powerful versions of standard items, sometimes even a new type of weapon 
+altogether. An exotic can usually hold a single mod, and appears colored in 
+magenta.
+
+3) Uniques - These items are completely different from commons.
+Some of them just have cool stats, while others have special
+abilities, and each of them come with a unique name. There are 2 ways to see
+one of them: complete certain special levels, where a unique item is a
+reward, or wait for level generator to spawn it on normal level (this happens
+fairly rarely). Uniques that are generated on levels are usually green, while
+rewarded uniques can have different colors. Only some uniques can be modded.
+
+Mods (Displayed by a ") are little packs that somehow enhance your weaponry
+or armor. Most weapons you find can be modded once, so try to cover up their
+weaknesses by modding them.
+
+Whenever you see something that you aren't familiar with, press "l" to
+trigger the Look command -- moving the cursor with the arrow keys will
+show what's under the cursor in the message bar. You can also press "?"
+in-game to open up the help menu.
+
+Happy fragging!
+
+=============================================================================
+
+Keybindings
+
+  Most keybindings can be redefined via the file doomrl.ini. The 
+  following set describes the standard layout.
+
+  Arrows -- Walking around (also PgUp, PgDn, Home, End -- diagonally)
+  '.'    -- Wait
+  '?'    -- Run on-line help
+  '>'    -- Go down stairs (you won't be able to come back!)
+  'g'    -- Pick up item from floor
+  'z'    -- Swap weapon (with prepared weapon)
+  'd'    -- Drop item
+  'i'    -- Show inventory
+  'e'    -- Show or change equipment/show traits
+  'o'    -- Open door
+  'c'    -- Close door
+  'l'    -- Toggle LookMode (Escape to exit)
+  'f'    -- Alternative Fire of equipped weapon (if available)
+  'F'    -- Special fire weapon (depending on weapon)
+  'r'    -- Reload equipped weapon
+  'R'    -- Special reload weapon (depending on weapon)
+  'u'    -- Use item from inventory (eg. Med-pack)/pull lever
+  'U'    -- Unload weapon from inventory/from ground
+  '@'    -- Show screen with character info (parameters of player
+            and his equipment)
+  'T'    -- Show character traits
+  'S'    -- Save game (works ONLY on the stairs to the next level)
+  'Q'    -- Quit game (without saving)
+  'P'    -- Show previous messages
+  ','    -- Run command
+  TAB    -- change tactic
+  '0'..'9' Weapon quick keys:
+      0  : Chainsaw
+      1  : Combat Knife
+      2  : Pistol
+      3  : Shotgun
+      4  : Combat shotgun
+      5  : Double shotgun
+      6  : Chaingun
+      7  : Rocket launcher
+      8  : Plasmagun
+      9  : BFG9000
+
+  '('    -- Toggle sound on and off
+  ')'    -- Toggle music on and off
+
+  'F10'  -- Makes screenshot in ASCII symbols and places it into
+            "Screenshot" folder in .txt format
+  'F9'   -- Makes colorful screenshot in BB codes (useful if you
+            want to post it on forum) and places it into "Screenshot"
+            folder in .txt format
+
+  Commands for blind mode:
+  'x'    -- Examines all visible NPCs
+  'X'    -- Examines all visible items
+
+
+Keys while targeting
+   
+  Arrows  -- move target line
+  TAB     -- toggle target
+  m       -- more information
+  f,SPACE -- fire
+
+
+Inventory screen 
+
+  Press item letter to do the default action on a given item. Wearable
+  items will switch if one is already worn.
+  
+  
+Equipment screen 
+
+  Pressing the letter of a worn item will unequip it. Pressing the 
+  letter of a empty slot will let you choose an item. Note though, that
+  switching through the inventory screen is faster.
+
+=============================================================================
+
+Feedback
+
+I await your feedback! Mail me at admin@haosforge.org. Tell me what you
+like, what you don't, and submit the bug reports :). The official webpage
+of DoomRL is
+
+  http://doom.chaosforge.org/
+
+DoomRL has it's own forum now, it is quite active, and can be found at
+
+  http://forum.chaosforge.org/
+
+The primary source for DoomRL guides, information and spoilers is the 
+DoomRL Wiki
+
+  http://doom.chaosforge.org/wiki/
+
+Announces of new releases will be placed on the official website and on
+rec.games.roguelike.announce in case of major releases.
+
+You can post your characters and discuss them on the misc roguelike
+newsgroup (after you die/win the game creates a memorial file "mortem.txt",
+and a player data file "player.txt"):
+
+  rec.games.roguelike.misc
+
+  (also on pl.rec.gry.komputerowe.roguelike if you're a polish speaking
+  person)
+
+IMPORTANT: please include the tag [DoomRL] if you post into any of these 
+groups. People use filters, and tags are very important for that use.
+
+Regulars and the author usualy lurk on the #chaosforge IRC channel on 
+irc.quakenet.org, you're welcome to visit and stay around (if you don't have a 
+IRC client, you can connect through a Java client at the ChaosForge forum).
+
+If you enjoy this game, please consider supporting it's developement! There's
+a PayPal donation option set up at the games site. Donations are very 
+welcome!
+
+Also, please visit the site of Chaosforge, to give a try at my other 
+roguelike games:
+
+  http://chaosforge.org/
+
+
+=============================================================================
+
+Credits
+
+Credits in this particular production go to Ilya Bely, for feedback, ideas
+and the enthusiasm that allowed me to actually finish something I started,
+and (my oh my!) release it...
+
+Thanks to my first beta-testers: Joseph Hewitt, Igor Savin, Timo Viitanen,
+ABCGi, David Damerell and Andrzej Kosnikowski.
+
+Special thanks goes to all the DoomRL forum regulars, especially (but not 
+only!) to Aki, Anticheese, Dervis, Derek Yu, jake250, Malek, Santiago 
+Zapata, Thomas, Jorge Alonso, Jered Cain and Turgor for providing valuable 
+ideas the new release of DoomRL.
+
+Also, a big thanks to the #chaosforge IRC Channel Lurkers and Regulars :).
+
+Big thanks to Michalis Kamburelis for the Linux port of DoomRL!
+
+Thanks to Malek and Derek Yu for the talent descriptions.
+
+Also big thanks goes to MaiZure for his help with marketing and PR :)
+
+He's the list of the TOP 10 people who keep ChaosForge running, based on 
+donations:
+
+1. Tavana
+2. zaimoni
+3. thelaptop
+4. Kaz
+5. MaiZure
+6. DaEezT
+7. Passionario
+8. torch
+9. Baphomet
+10. Khallis
+10. rax
+10. Count0
+10. Nooa
+10. tehtmi
+10. t0nedude
+
+(same numbers note ex aequo result)
+
+The unsorted list of other great people that have donated : AeoniX, Aki,
+Aoanla, BDR, BehroozWolf, bfg9001, Burzmali, Count0, Deaven, Derek Yu,
+Dervis, FantomFang, FlynnTheAvatar, Gargulec, GenTechJ, Grassi, Grim,
+Gulthorpe, Herschel, Hjassan, j1r, JysusCryst, Kohlrabi, lyconaut,
+Madrayken, Madtrixr, maso, Nillo, Picklish, rekenne, RickVoid, Rook,
+Sdlonyer55, ssfsx17, Styro, Super Jamie, TameTick, Tupeco, Vestin,
+Davidek, Guillaume Voisine, dying_sphynx, Nomad, Rax, Mazinkaiser,
+Iltavuo, PFL, So_1337, olberg, Egor,  wolis, Sylph, Buzzard,  samspot,
+termith, pndrev, Ivan Kanis, areacode212, Napsterbater, ceb, qbert911,
+Iskander, Project Dark Fox, Agetian, Khallis, felttippen, NullPointer,
+Joseph Hewitt, Xi over Xi-bar, siema, buzzbomber, MEDIEVAL_MIKU,
+GenTechJ, Teku and ZellSF
+
+
+Also thanks to the whole crew of rec.games.roguelike.development for
+the years spent together and the warm welcome of my game!
+
+
+=============================================================================
+
+Disclaimer
+
+This game is Freeware but with some limitations. You can only download it
+from the official website. Distribution (cd-magazines, other websites) etc.
+is prohibited without asking the author. If you want to place this game
+somewhere just drop me an e-mail and I'll probably agree (I'm not that
+bad a guy :).
+
+THERE IS NO WARRANTY OF ANY KIND. I TAKE NO RESPONSIBILTY FOR ANY DAMAGE
+CAUSED BY THIS SOFTWARE. USE IT AT YOUR OWN RISK.
+
+Doom(tm) is a trademark of id Software. Many of the names in this game may
+be trademarks of id Software. Using them in this free public production is
+not supposed to challenge the rights of id Software.
+
+
+=============================================================================
+

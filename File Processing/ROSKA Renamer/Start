@@ -1,0 +1,158 @@
+#!/bin/bash
+# ROSKA Renamer
+# Copyright (C) 2010 Roberto Scaccaglia
+# This is free software with ABSOLUTELY NO WARRANTY.
+#
+# This program is free software. you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License , or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+PROGRAM_FOLDER_const="$HOME/.gnome2/nemo-scripts/File Processing/ROSKA Renamer"
+
+source "$PROGRAM_FOLDER_const/lang.default"
+source "$PROGRAM_FOLDER_const/ROSKA Renamer.conf"
+source "$PROGRAM_FOLDER_const/ROSKA Renamer.global"
+source "$PROGRAM_FOLDER_const/ROSKA Renamer.lib"
+source "$PROGRAM_FOLDER_const/ROSKA Undo.lib"
+source "$PROGRAM_FOLDER_const/ROSKA Pref.lib"
+
+
+#----------------------------------------
+#---------- GET START ACTION ------------
+#----------------------------------------
+
+actionSelected=$(getStartAction "$PROGRAM_NAME_const")
+if [ $? -eq 1 ]; then exit; fi
+
+case "$actionSelected" in
+	"2" ) undoLast "$PROGRAM_NAME_const" "$UNDO_FILENAME_const" ;;
+	"3" ) setLanguage "$PROGRAM_NAME_const" "$PROGRAM_FOLDER_const" "$LANG_FOLDER_const" "$LANG_FILE_PREFIX_const" "$currentLang_str" ;;
+	"4" ) showUserManual "$PROGRAM_NAME_const" ;;
+	"5" ) showInfo "$PROGRAM_NAME_const" ;;
+esac
+if [ $? -eq 1 ]; then exit; fi
+
+#----------------------------------------
+#---------- BEGIN RENAME ACTION ---------
+#----------------------------------------
+
+# Check if at least one file is selected
+if [ -z $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS ]; then
+	zenity --warning --title="$PROGRAM_NAME_const" --text="$nothingToRename_txt"
+	exit
+fi
+
+#----------------------------------------
+#------------ GET USER INPUT ------------
+#----------------------------------------
+
+newFileNameBase_str=$(getNewFileName "$PROGRAM_NAME_const" "$DEF_DEST_NAME")
+if [ $? -eq 1 ]; then exit; fi #If cancel button is pressed the program ends
+
+
+counterValue_int=$(getStartCounterValue "$PROGRAM_NAME_const" $DEF_COUNTER)
+if [ $? -eq 1 ]; then exit; fi #If cancel button is pressed the program ends
+
+
+selectedOptions_str=$(getSelectedOptions "$PROGRAM_NAME_const" "$DEF_OVERWRITE" "$DEF_SAVE_EXTENSION")
+if [ $? -eq 1 ]; then exit; fi #If cancel button is pressed the program ends
+for option_str in $selectedOptions_str; do
+	case "$option_str" in
+		"1" ) renameCommand_str="mv"; renameParam_str="";;
+		"2" ) saveExtension_int="1";;
+	esac
+done
+
+#----------------------------------------
+#------------- RENAME FILES -------------
+#----------------------------------------
+
+#nautilusPath=$(echo $(pwd))
+differentPath_int=0
+counter_int=$counterValue_int
+progressBarStep_dec=$(echo "scale=2; 100/$totalFileSelected_int" | bc)
+error_int=0
+skippedFile_int=0
+skippedFile_str=""
+createUndoFile $UNDO_FILENAME_const $PROGRAM_NAME_const
+
+(
+lastFilePath=""
+for fileName_str in $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS; do
+	filePath=${fileName_str%/*}
+
+	# Check if the selected files are in different directory
+	# It is sufficient to get the first path as last path.
+	if [ "$lastFilePath" == "" ]; then
+		lastFilePath=$filePath
+	else
+		if [ $lastFilePath != $filePath ]; then differentPath_int=1; fi
+	fi
+
+	# Set the new file name without extension
+	newFileName_str="$filePath/$newFileNameBase_str$DEF_COUNTER_SEPARATOR$DEF_COUNTER_LEFT_CHAR$counter_int$DEF_COUNTER_RIGHT_CHAR"
+
+	# Check if "Preserve file extension" was selected
+	if [ $saveExtension_int -eq 1 ]; then
+		# Get the file extension
+		basename_str=$(basename $fileName_str)
+		extension_str=${basename_str##*.}
+		dottedExtension_str=".$extension_str"
+		name_str=${basename_str%.*}
+		if [ $name_str == $extension_str ] || [ -z $name_str ] || [ -z $extension_str ]; then
+			dottedExtension_str=""
+		fi
+		# Add file extension to the new filename
+		newFileName_str="$newFileName_str$dottedExtension_str"
+	fi
+
+	# Check if the new filename already exists
+	if [ -f $newFileName_str ]; then
+		# Store the name and total number of files skipped
+		let skippedFile_int=$skippedFile_int+1 # let skippedFile_int+=1 also work
+		skippedFile_str=$skippedFile_str"\"$fileName_str\" \"$newFileName_str\" "
+	else
+		# Execute the rename action
+		if [ -z $renameParam_str ]; then
+			$renameCommand_str "$fileName_str" "$newFileName_str"
+		else
+			$renameCommand_str "$renameParam_str" "$fileName_str" "$newFileName_str"
+		fi
+		# Test if the raname command (mv or cp) has been completed succesfully
+		if [ $? -eq 0 ]; then
+			addUndoData $UNDO_FILENAME_const $renameCommand_str $fileName_str $newFileName_str
+		else
+			let error_int=$error_int+1
+		fi
+	fi
+
+	echo "scale=0; $progressBarStep_dec * $counter_int" | bc
+	echo "# ${renaming_txt[0]}: $basename_str"
+	let counter_int=$counter_int+1 # let counter_int+=1 also work
+done
+
+finalizeUndoFile $UNDO_FILENAME_const $PROGRAM_NAME_const
+
+totalFileRenamed="$(($totalFileSelected_int-$skippedFile_int-$error_int))"
+if [ $totalFileRenamed -eq 0 ]; then removeUndoFile $UNDO_FILENAME_const; fi
+echo "# $totalFileSelected_int ${result_txt[0]} ($totalFileRenamed $renamed_txt $skippedFile_int $skipped_txt $error_int $error_txt)"
+
+if [ $skippedFile_int -gt 0 ] && [ $DEF_SHOW_SKIPPED -eq 1 ]; then
+	echo $skippedFile_str | xargs zenity --list --width 600 --height=300 --title="$PROGRAM_NAME_const" --text="${result_txt[1]}" --column "${result_txt[2]}" --column "${result_txt[3]}"
+fi
+
+if [ $differentPath_int -eq 1 ] && [ $DEF_SHOW_PATH_WARNING -eq 1 ]; then
+	zenity --warning --title="$PROGRAM_NAME_const" --text="${warning_txt[0]}"
+fi
+
+) | zenity --progress --width 500 --title="$PROGRAM_NAME_const" --text="${renaming_txt[0]}" --percentage=0
+if [ $? -eq 1 ]; then exit; fi # If cancel button is pressed the program ends

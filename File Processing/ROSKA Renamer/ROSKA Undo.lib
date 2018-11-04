@@ -1,0 +1,89 @@
+#!/bin/bash
+# This file is part of ROSKA Renamer program
+#
+# ROSKA Renamer
+# Copyright (C) 2010 Roberto Scaccaglia
+# This is free software with ABSOLUTELY NO WARRANTY.
+#
+# This program is free software. you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License , or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+function createUndoFile ()
+{
+	fileName_str="$1" # Undo info file path
+	progName_str="$2"
+
+	# Prepare a temp file to undo last operation
+	echo "#-----------------------------------------------------" > $fileName_str
+	echo "# $progName_str $(date +"%Y-%m-%d %H:%M:%S")" >> $fileName_str
+	echo "#-----------------------------------------------------" >> $fileName_str
+	echo " " >> $fileName_str
+	echo "error_int=0" >> $fileName_str
+	echo " " >> $fileName_str
+}
+
+function removeUndoFile ()
+{
+	fileName_str="$1"
+
+	rm "$fileName_str"
+}
+
+# Add a row (to the temp file) with parameters for the undo action command
+function addUndoData ()
+{
+	fileName_str=$1		# Undo file path
+	currentAction="$2"	# The action selected: overwrite (mv) or copy (cp)
+	originalName="$3"	# The filename before renaming
+	renamedName="$4"	# The filename after renaming
+	
+	# Every " in original names are substituited by "" in undo file info.
+	originalName=${originalName//\"/\\\"}
+	case "$currentAction" in
+		"cp" ) echo "rm -r \"$renamedName\"" >> $fileName_str;;
+		"mv" ) echo "mv \"$renamedName\" \"$originalName\"" >> $fileName_str;;
+	esac
+	echo "if ! [ \$? -eq 0 ]; then	let error_int=\$error_int+1; fi" >> $fileName_str
+}
+
+function finalizeUndoFile ()
+{
+	fileName_str="$1" # Undo info file path
+	progName_str="$2"
+
+	echo " " >> $fileName_str
+	echo "if [ \$error_int -gt 0 ]; then" >> $fileName_str
+	echo "    zenity --info --title \"$progName_str\" --text \"${undo_txt[1]} \$error_int $error_txt.\"" >> $fileName_str
+	echo "else" >> $fileName_str
+	echo "    zenity --info --title \"$progName_str\" --text \"${undo_txt[2]}\"" >> $fileName_str
+	echo "fi" >> $fileName_str
+}
+
+
+function undoLast ()
+{
+	programName_str=$1
+	undoFilename_str=$2
+
+	# Check if the undo file exist
+	if [ ! -f $undoFilename_str ]; then
+		zenity --info --title $programName_str --text "${undo_txt[0]}"
+		return 1
+	fi
+
+	source "$undoFilename_str"
+	$(removeUndoFile $undoFilename_str)
+
+	return 1;
+}
+

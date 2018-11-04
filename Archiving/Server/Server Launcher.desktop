@@ -1,0 +1,10 @@
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_US]=server
+Name[en_US]=Server Launcher
+Exec=/usr/share/server/servers.sh
+Name=Server
+Icon=server

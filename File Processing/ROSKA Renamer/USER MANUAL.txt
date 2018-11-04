@@ -1,0 +1,160 @@
+# This file is part of ROSKA Renamer program
+#
+# ROSKA Renamer
+# Copyright (C) 2010 Roberto Scaccaglia
+# This is free software with ABSOLUTELY NO WARRANTY.
+#
+# This program is free software. you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License , or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+--------------------------------------
+--------------------------------------
+Summary
+--------------------------------------
+--------------------------------------
+
+1) Rename files or folders
+
+2) Undo last action
+
+3) Change language
+
+4) Change default options and layout
+
+5) To Do list
+
+
+--------------------------------------
+--------------------------------------
+1) RENAME FILES OR FOLDERS
+--------------------------------------
+--------------------------------------
+
+1.1) Choose some files or folders by Nautilus with mouse
+or keyboard
+
+1.2) Open Nautilus context menu right clicking with mouse
+on one of the selected objects
+
+1.3) Select "Script/ROSKA Renamer/Start" from context menù.
+
+1.3b) The Action window will appear: select Rename.
+
+1.4) A windows will appear and you have to enter a new name for the files
+and press "OK"-
+
+1.5) Now insert a value from which the counter will start and click "OK".
+
+1.6) An options window will appear. You can select multiple options by
+checking or uncheking every value in the list.
+
+	- Overwrite (check it if you want to rename the original files,
+               uncheck ifif you want to copy them in new files)
+
+	- Save extensions (check it if the new file name have to replicate
+               the original file extension, uncheck it if you don't want file
+               extension in new name)
+
+Press "OK" to complete renaming of selected files or folders
+
+IMPORTANT NOTES:
+---------------
+a) If the destination filename already exists, ROSKA Renamer skips the current
+file renaming, but It continues renaming other files.
+b) If there are some errors while renaming, ROSKA Renamer skips the current
+file renaming, but It continues with other files.
+
+
+--------------------------------------
+--------------------------------------
+2) UNDO LAST ACTION
+--------------------------------------
+--------------------------------------
+
+2.1) Open Nautilus.
+2.2) Open Nautilus context menù.
+2.3) Select "Script/ROSKA Renamer/Start" from context menù.
+2.4) The Action window will appear: select "Undo last"
+
+IMPORTANT NOTES:
+---------------
+a) If some errors occur, ROSKA Renamer skips the current
+undo operation, but it continues with other ones.
+b) You can Undo only last ROSKA Renamer execution.
+c) If you logout from current session or reboot the
+system all undo info will be lost.
+
+
+--------------------------------------
+--------------------------------------
+3) CHANGE LANGUAGE
+--------------------------------------
+--------------------------------------
+
+You can choose from available languages or you can
+customize your own language file.
+
+3.1) Choose from available languages
+
+  a) Open Nautilus context menu right clicking with mouse
+     on the desktop
+  b) Select "Script/ROSKA Renamer/Start" from context menù.
+  c) The Action window will appear: select "Set language".
+  d) Choose the language you desire and click Ok button.
+
+3.2) Customize language file
+
+  a) You can find the language files in .lang folder
+     ($HOME/.gnome2/nemo-scripts/ROSKA Renamer/.lang)
+
+  b) Every language filename convention is lang.LANG where
+     LANG is the language identifier in the form i.e: en_EN,
+     it_IT etc.
+
+  c) Copy a language file and rename it with your language id
+     respecting the name convention.
+
+  d) Translate every string in your language.
+
+  e) Don't forget to modify the currentLang_str value according
+     to your language id.
+
+  f) Save the new file.
+
+  g) Now you can see the new language option in the "Set language" window
+     (see 3.1 paragraph)
+
+
+--------------------------------------
+--------------------------------------
+4) CHANGE DEFAULT OPTIONS AND LAYOUT
+--------------------------------------
+--------------------------------------
+
+If you want to change default options and
+layout you can edit RanamePlus.conf file
+("$HOME/.gnome2/nemo-scripts/ROSKA Renamer/ROSKA Renamer.conf")
+
+
+--------------------------------------
+--------------------------------------
+5) TO DO
+--------------------------------------
+--------------------------------------
+
+Next work to do:
+
+- Improve error handling and reporting.
+- Possibility to save default options by GUI interface.
+- Code optimization.
+

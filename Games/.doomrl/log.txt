@@ -1,0 +1,202 @@
+--- Logging start : 18-11-10 08:06:14 ---
+<TSystems/0/0> Initialized.
+<TDoom/0/0> Initialized.
+<TTextModeOutput/0/0> Initialized.
+<TTextModeOutput/0/0> Setting ASCII video to 80x25 color.
+<TTextModeOutput/0/0> Failed to set ASCII 80x25 color textmode.
+<TTextModeInput/0/0> Initialized.
+<TTextModeInput/0/0> Terminal Keyboard system ready.
+<TTextModeInput/0/0> MUSICTOGGLE->)
+<TTextModeInput/0/0> QK_SHOTGUN->3
+<TTextModeInput/0/0> QUIT->Q
+<TTextModeInput/0/0> ALTFIRE->F
+<TTextModeInput/0/0> QK_CHAINGUN->6
+<TTextModeInput/0/0> QK_CHAINSAW->0
+<TTextModeInput/0/0> SOUNDTOGGLE->(
+<TTextModeInput/0/0> QK_DOUBLESG->5
+<TTextModeInput/0/0> CLOSE->c
+<TTextModeInput/0/0> EQUIPMENT->e
+<TTextModeInput/0/0> QK_PLASMA->8
+<TTextModeInput/0/0> RUNMODE->,
+<TTextModeInput/0/0> WALKNORTH->UP
+<TTextModeInput/0/0> ENTER->>
+<TTextModeInput/0/0> SCREENSHOTBB->F9
+<TTextModeInput/0/0> RELOADSPEC->R
+<TTextModeInput/0/0> WALKSOUTH->DOWN
+<TTextModeInput/0/0> QK_ROCKET->7
+<TTextModeInput/0/0> EXAMINENPC->x
+<TTextModeInput/0/0> USE->u
+<TTextModeInput/0/0> INVENTORY->i
+<TTextModeInput/0/0> ESCAPE->ESCAPE
+<TTextModeInput/0/0> QK_BFG9000->9
+<TTextModeInput/0/0> QK_PISTOL->2
+<TTextModeInput/0/0> RELOAD->r
+<TTextModeInput/0/0> MESSAGES->P
+<TTextModeInput/0/0> TACTIC->TAB
+<TTextModeInput/0/0> PLAYERINFO->@
+<TTextModeInput/0/0> WALKEAST->RIGHT
+<TTextModeInput/0/0> SCREENSHOT->F10
+<TTextModeInput/0/0> MOREINFO->m
+<TTextModeInput/0/0> WALKNE->PAGEUP
+<TTextModeInput/0/0> UNLOAD->U
+<TTextModeInput/0/0> SWAPWEAPON->z
+<TTextModeInput/0/0> FIRE->f
+<TTextModeInput/0/0> WALKSE->PAGEDOWN
+<TTextModeInput/0/0> QK_KNIFE->1
+<TTextModeInput/0/0> HELP->?
+<TTextModeInput/0/0> PICKUP->g
+<TTextModeInput/0/0> SAVE->S
+<TTextModeInput/0/0> QK_ASSAULTSG->4
+<TTextModeInput/0/0> OPEN->o
+<TTextModeInput/0/0> WALKWEST->LEFT
+<TTextModeInput/0/0> WALKNW->HOME
+<TTextModeInput/0/0> LOOK->l
+<TTextModeInput/0/0> DROP->d
+<TTextModeInput/0/0> WAIT->.
+<TTextModeInput/0/0> EXAMINEITEM->X
+<TTextModeInput/0/0> TRAITS->T
+<TTextModeInput/0/0> WALKSW->END
+<TTextModeInput/0/0> OK->ENTER
+<TTextModeMessages/0/0> Initialized.
+<TVDataFile> Loading "doomrl.wad"...
+<TVDataFile> Loaded "doomrl.wad" (55 files).
+<TVDataFile> VDF extraction ()
+Blockset loaded
+<TDoomLua> Loading LUA stream -- "enum.lua" (2082b)
+<TDoomLua> Reading "enum.lua" (0-2082)
+<TDoomLua> Loaded "enum.lua" (2082b)
+<TDoomLua> Loading LUA stream -- "constants.lua" (7157b)
+<TDoomLua> Reading "constants.lua" (0-7157)
+<TDoomLua> Loaded "constants.lua" (7157b)
+<TDoomLua> Loading LUA stream -- "functions.lua" (3688b)
+<TDoomLua> Reading "functions.lua" (0-3688)
+<TDoomLua> Loaded "functions.lua" (3688b)
+<TDoomLua> Loading LUA stream -- "core.lua" (31399b)
+<TDoomLua> Reading "core.lua" (0-31399)
+<TDoomLua> Loaded "core.lua" (31399b)
+<TDoomLua> Loading LUA stream -- "main.lua" (8888b)
+<TDoomLua> Reading "main.lua" (0-8888)
+<TDoomLua> Loaded "main.lua" (8888b)
+<TDoomLua> Loading LUA stream -- "affects.lua" (2254b)
+<TDoomLua> Reading "affects.lua" (0-2254)
+<TDoomLua> Loaded "affects.lua" (2254b)
+<TDoomLua> Loading LUA stream -- "medals.lua" (11230b)
+<TDoomLua> Reading "medals.lua" (0-11230)
+<TDoomLua> Loaded "medals.lua" (11230b)
+<TDoomLua> Loading LUA stream -- "missiles.lua" (5884b)
+<TDoomLua> Reading "missiles.lua" (0-5884)
+<TDoomLua> Loaded "missiles.lua" (5884b)
+<TDoomLua> Loading LUA stream -- "items.lua" (21366b)
+<TDoomLua> Reading "items.lua" (0-21366)
+<TDoomLua> Loaded "items.lua" (21366b)
+<TDoomLua> Loading LUA stream -- "eitems.lua" (12939b)
+<TDoomLua> Reading "eitems.lua" (0-12939)
+<TDoomLua> Loaded "eitems.lua" (12939b)
+<TDoomLua> Loading LUA stream -- "uitems.lua" (11596b)
+<TDoomLua> Reading "uitems.lua" (0-11596)
+<TDoomLua> Loaded "uitems.lua" (11596b)
+<TDoomLua> Loading LUA stream -- "cells.lua" (8153b)
+<TDoomLua> Reading "cells.lua" (0-8153)
+<TDoomLua> Loaded "cells.lua" (8153b)
+<TDoomLua> Loading LUA stream -- "traits.lua" (16103b)
+<TDoomLua> Reading "traits.lua" (0-16103)
+<TDoomLua> Loaded "traits.lua" (16103b)
+<TDoomLua> Loading LUA stream -- "beings.lua" (17127b)
+<TDoomLua> Reading "beings.lua" (0-17127)
+<TDoomLua> Loaded "beings.lua" (17127b)
+<TDoomLua> Loading LUA stream -- "ranks.lua" (6924b)
+<TDoomLua> Reading "ranks.lua" (0-6924)
+<TDoomLua> Loaded "ranks.lua" (6924b)
+<TDoomLua> Loading LUA stream -- "plot.lua" (4310b)
+<TDoomLua> Reading "plot.lua" (0-4310)
+<TDoomLua> Loaded "plot.lua" (4310b)
+<TDoomLua> Loading LUA stream -- "challenge.lua" (27574b)
+<TDoomLua> Reading "challenge.lua" (0-27574)
+<TDoomLua> Loaded "challenge.lua" (27574b)
+<TDoomLua> Loading LUA stream -- "boss.lua" (3515b)
+<TDoomLua> Reading "boss.lua" (0-3515)
+<TDoomLua> Loaded "boss.lua" (3515b)
+<TDoomLua> Loading LUA stream -- "hellgate.lua" (5422b)
+<TDoomLua> Reading "hellgate.lua" (0-5422)
+<TDoomLua> Loaded "hellgate.lua" (5422b)
+<TDoomLua> Loading LUA stream -- "arena.lua" (9637b)
+<TDoomLua> Reading "arena.lua" (0-9637)
+<TDoomLua> Loaded "arena.lua" (9637b)
+<TDoomLua> Loading LUA stream -- "fortress.lua" (7143b)
+<TDoomLua> Reading "fortress.lua" (0-7143)
+<TDoomLua> Loaded "fortress.lua" (7143b)
+<TDoomLua> Loading LUA stream -- "intro.lua" (6083b)
+<TDoomLua> Reading "intro.lua" (0-6083)
+<TDoomLua> Loaded "intro.lua" (6083b)
+<TDoomLua> Loading LUA stream -- "chained.lua" (3605b)
+<TDoomLua> Reading "chained.lua" (0-3605)
+<TDoomLua> Loaded "chained.lua" (3605b)
+<TDoomLua> Loading LUA stream -- "carnage.lua" (3952b)
+<TDoomLua> Reading "carnage.lua" (0-3952)
+<TDoomLua> Loaded "carnage.lua" (3952b)
+<TDoomLua> Loading LUA stream -- "armory.lua" (4860b)
+<TDoomLua> Reading "armory.lua" (0-4860)
+<TDoomLua> Loaded "armory.lua" (4860b)
+<TDoomLua> Loading LUA stream -- "spider.lua" (5397b)
+<TDoomLua> Reading "spider.lua" (0-5397)
+<TDoomLua> Loaded "spider.lua" (5397b)
+<TDoomLua> Loading LUA stream -- "skulls.lua" (5047b)
+<TDoomLua> Reading "skulls.lua" (0-5047)
+<TDoomLua> Loaded "skulls.lua" (5047b)
+<TDoomLua> Loading LUA stream -- "wall.lua" (6232b)
+<TDoomLua> Reading "wall.lua" (0-6232)
+<TDoomLua> Loaded "wall.lua" (6232b)
+<TDoomLua> Loading LUA stream -- "vaults.lua" (8243b)
+<TDoomLua> Reading "vaults.lua" (0-8243)
+<TDoomLua> Loaded "vaults.lua" (8243b)
+<TDoomLua> Loading LUA stream -- "mortuary.lua" (6542b)
+<TDoomLua> Reading "mortuary.lua" (0-6542)
+<TDoomLua> Loaded "mortuary.lua" (6542b)
+<TDoomLua> Loading LUA stream -- "lavapits.lua" (5833b)
+<TDoomLua> Reading "lavapits.lua" (0-5833)
+<TDoomLua> Loaded "lavapits.lua" (5833b)
+<TVDataFile> VDF extraction completed ()
+Registering cell "bloody corpse"...
+Registering cell "floor"...
+Registering cell "pool of blood"...
+Registering cell "blood"...
+Registering cell "stone wall"...
+Registering cell "bloodstone"...
+Registering cell "stone wall"...
+Registering cell "bloodstone"...
+Registering cell "blooded wall"...
+Registering cell "down stairs"...
+Registering cell "closed door"...
+Registering cell "open door"...
+Registering cell "barrel of fuel"...
+Registering cell "barrel of acid"...
+Registering cell "barrel of napalm"...
+Registering cell "water"...
+Registering cell "acid"...
+Registering cell "lava"...
+Registering cell "blooded wall"...
+Registering cell "locked door"...
+Registering cell "green wall"...
+Registering cell "blooded wall"...
+Registering cell "green wall"...
+Registering cell "stone wall"...
+Registering cell "Phobos rock"...
+Registering cell "a nuke!"...
+Registering cell "down stairs"...
+Registering cell "down stairs"...
+Registering cell "former human corpse"...
+Registering cell "former sergeant corpse"...
+Registering cell "former captain corpse"...
+Registering cell "imp corpse"...
+Registering cell "demon corpse"...
+Registering cell "cacodemon corpse"...
+Registering cell "baron of hell corpse"...
+Registering cell "hell knight corpse"...
+Registering cell "arachnotron corpse"...
+Registering cell "former commando corpse"...
+Registering cell "mancubus corpse"...
+Registering cell "revenant corpse"...
+Registering cell "nightmare imp corpse"...
+Registering cell "nightmare cacodemon corpse"...
+Registering cell "nightmare demon corpse"...
+Registering cell "bruiser brother corpse"...
